@@ -1,6 +1,21 @@
 def consolidate_cart(cart)
   # code here
+  cart.each_with_object({}) do |arr, new |
+
+    arr.each do |key, data|
+    #binding.pry
+     data.each do |details, result |
+
+    
+      new[key] ||= {}
+      new[key][details] ||= result
+    
+    
+     end 
+    end 
+  end
 end
+
 
 def apply_coupons(cart, coupons)
   # code here
