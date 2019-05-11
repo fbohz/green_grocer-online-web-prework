@@ -20,7 +20,7 @@ def consolidate_cart(cart)
      
     new_arr = new
   end
-  puts new_arr
+   new_arr
 end
 
 
