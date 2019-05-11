@@ -1,19 +1,26 @@
 def consolidate_cart(cart)
   # code here
+  count = 0
+  new_arr = {}
   cart.each_with_object({}) do |arr, new |
-
-    arr.each do |key, data|
-    #binding.pry
-     data.each do |details, result |
-
     
+    arr.each do |key, data|
+    
+     data.each do |details, result |
       new[key] ||= {}
       new[key][details] ||= result
-    
-    
+      #puts new
      end 
-    end 
+    
+    new[key][:count] ||= count
+    new[key][:count] += 1
+    # new[key][:count] += 1
+    
+    end
+     
+    new_arr = new
   end
+  puts new_arr
 end
 
 
